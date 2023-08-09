@@ -1,0 +1,31 @@
+.sketch-container {
+  width: 70%;
+  height: 80%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.sketch-clear {
+  text-decoration: none;
+  background-color: $primary-color;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: $secondary-color;
+  position: absolute;
+  right: 25%;
+  top: 1rem;
+  transform: translate(25%, 0);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: $body-text;
+  font-weight: 700;
+
+  @include tablet {
+    display: none;
+  }
+}

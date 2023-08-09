@@ -1,0 +1,75 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin transition-ease {
+  transition: all 0.8s ease;
+}
+
+@mixin transition-ease-in-out {
+  transition: all 0.8s ease-in-out;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 650px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin section {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+@mixin heading {
+  font-size: $heading2-text;
+  font-family: $primary-font;
+  padding-bottom: 0.8rem;
+  color: $secondary-color;
+  border-bottom: 3px solid $tertiary-color;
+  width: fit-content;
+
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  @include tablet {
+    font-size: $heading3-text;
+    text-align: center;
+  }
+}
+@mixin subHeading {
+  font-size: $heading3-text;
+  font-family: $primary-font;
+  padding-bottom: 0.8rem;
+  color: $secondary-color;
+  border-bottom: 3px solid $tertiary-color;
+  width: fit-content;
+  margin-bottom: 2rem;
+  @include tablet {
+    font-size: $heading2-text;
+  }
+  @include mobile {
+    font-size: $heading3-text;
+  }
+}
+
+@mixin para {
+  font-size: $body-text;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.2rem;
+  width: 100%;
+
+  @include tablet() {
+    font-size: $small-text;
+    line-height: 1.1rem;
+  }
+}

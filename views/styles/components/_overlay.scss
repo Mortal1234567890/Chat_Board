@@ -1,0 +1,46 @@
+.overlay {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(36, 44, 156, 0.452);
+  color: $primary-color;
+  display: none;
+  //   opacity: 0;
+
+  &__container {
+    width: 500px;
+    position: absolute;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $tertiary-color;
+    font-family: $primary-font;
+    border-radius: 30px;
+    padding: 2rem 0rem;
+  }
+
+  &__heading {
+    font-size: $heading3-text;
+    color: $secondary-color;
+  }
+
+  &__body {
+    font-size: 22px;
+  }
+  &__close {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+  &__smile {
+    font-size: $heading3-text;
+  }
+}

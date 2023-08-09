@@ -1,0 +1,79 @@
+.header {
+  height: 10vh;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 200;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 5vw;
+
+  @include mobile {
+    width: 100vw;
+  }
+
+  &__image {
+    width: 45px;
+  }
+  &__logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-family: $primary-font;
+      font-size: $normal-text;
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__icon {
+    font-size: 40px;
+    margin-right: 30px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  &__navbar {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: $body-text;
+    transition: all 0.8s ease;
+
+    &__mobile {
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      background-color: $primary-color;
+      justify-content: space-evenly;
+      font-size: $normal-text;
+      z-index: 10;
+      right: -150%;
+    }
+  }
+  &__nav {
+    color: $tertiary-color;
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px 10px;
+    letter-spacing: 0.09rem;
+    cursor: pointer;
+
+    &:last-child {
+      border: 3px solid $secondary-color;
+    }
+  }
+}
+.nav__active {
+  right: 0%;
+}

@@ -1,0 +1,38 @@
+.join-main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0rem;
+  label {
+    font-size: $body-text;
+    margin: 5px;
+  }
+  input {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    color: $secondary-color;
+  }
+}
+
+.btn-form {
+  font-size: $normal-text;
+  width: 100%;
+  background-color: $primary-color;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: $secondary-color;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}

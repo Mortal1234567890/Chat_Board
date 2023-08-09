@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>ChatBoard</title>
+    <script src="libraries/p5.min.js"></script>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header>
+        <a href="index.html" class="btn-link">Leave Room</a>
+      </header>
+      <div class="sketch-clear">Clear Canvas</div>
+      <div class="sketch-container"></div>
+      <div class="icons">
+        <i class="fa-solid fa-circle-info btn-info"></i>
+        <i class="fa-solid fa-comment btn-chat"></i>
+        <i class="fa-solid fa-user-group btn-users"></i>
+      </div>
+      <div class="chat-user display-none">
+        <h2 id="room-name"></h2>
+        <h3>Users</h3>
+        <ul id="users"></ul>
+      </div>
+      <div class="chat-info display-none">
+        <h1>Joining Info</h1>
+        <p class="chat-info-matter"></p>
+      </div>
+
+      <div class="chat-main">
+        <div class="chat-sidebar">
+          <h3>Room Name:</h3>
+        </div>
+
+        <div class="chat-messages"></div>
+
+        <div class="chat-form-container">
+          <form id="chat-form">
+            <input
+              id="msg"
+              type="text"
+              placeholder="Enter Message"
+              required
+              autocomplete="off"
+            />
+            <button class="btn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js"
+      integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/selectors.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="myLine.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>

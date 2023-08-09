@@ -1,0 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #9921e8;
+  background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+@include tablet {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #0066cc;
+}
